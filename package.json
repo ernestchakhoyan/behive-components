@@ -39,11 +39,18 @@
     "rollup": "^1.12.3",
     "rollup-plugin-babel": "^4.3.2",
     "rollup-plugin-node-resolve": "^5.0.0",
+    "rollup-plugin-string": "^3.0.0",
     "rollup-plugin-terser": "^4.0.4"
   },
   "dependencies": {
     "@babel/core": "^7.4.4",
     "@babel/preset-env": "^7.4.4",
     "@babel/preset-react": "^7.0.0"
+  },
+  "peerDependencies": {
+    "react": ">=15"
+  },
+  "engines": {
+    "node" : ">=8"
   }
 }
