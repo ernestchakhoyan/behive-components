@@ -8,6 +8,9 @@
   "homepage": "https://github.com/ernestchakhoyan/behive-components.git",
   "author": "Ernest Chakhoyan",
   "license": "MIT",
+  "files": [
+    "dist"
+  ],
   "scripts": {
     "prebuild": "rimraf dist",
     "build": "rollup -c",
