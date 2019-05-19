@@ -1,6 +1,1 @@
-console
-.log("hello"
- + "hi"
-  + 6
-
-);
+console.log('hello' + 'hi' + 6)
