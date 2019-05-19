@@ -3,29 +3,24 @@ import styles from "./Ellipsis.css";
 
 const Ellipsis = props => (
   <>
+    <style>{styles.toString()}</style>
     <div className="lds-css ng-scope">
-      <div style="width:100%;height:100%" className="lds-ellipsis">
-        <div>
-          <div/>
-        </div>
-        <div>
-          <div/>
-        </div>
-        <div>
-          <div/>
-        </div>
-        <div>
-          <div/>
-        </div>
-        <div>
-          <div/>
-        </div>
+      <div className="lds-spinner" style="width:100%;height:100%">
+        <div />
+        <div />
+        <div />
+        <div />
+        <div />
+        <div />
+        <div />
+        <div />
+        <div />
+        <div />
+        <div />
+        <div />
       </div>
-
     </div>
   </>
 );
-
-
 
 export default Ellipsis;

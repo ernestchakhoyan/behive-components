@@ -1,7 +1,9 @@
 {
   "name": "behive-components",
   "version": "1.0.0",
-  "main": "index.js",
+  "main": "dist/bundle.cjs.js",
+  "module": "dist/bundle.esm.js",
+  "sideEffects": false,
   "repository": "https://github.com/ernestchakhoyan/behive-components.git",
   "homepage": "https://github.com/ernestchakhoyan/behive-components.git",
   "author": "Ernest Chakhoyan",
@@ -51,6 +53,6 @@
     "react": ">=15"
   },
   "engines": {
-    "node" : ">=8"
+    "node": ">=8"
   }
 }
