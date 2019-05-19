@@ -1,0 +1,9 @@
+{
+  "name": "behive-components",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/ernestchakhoyan/behive-components.git",
+  "homepage": "https://github.com/ernestchakhoyan/behive-components.git",
+  "author": "Ernest Chakhoyan",
+  "license": "MIT"
+}
