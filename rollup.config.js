@@ -10,7 +10,7 @@ const production = !process.env.ROLLUP_WATCH
 
 module.exports = {
   input: 'src/index.js',
-  external: ['react'],
+  external: ['react', 'react-dom', 'prop-types', 'styled-components'],
   output: [
     {
       file: `${dist}/${bundle}.cjs.js`,
