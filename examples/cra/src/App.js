@@ -1,16 +1,9 @@
 import React from 'react'
 
-import { Ring, TextButton } from 'behive-components'
+import { Ripple, TextButton } from 'behive-components'
 
 function App () {
-  return (
-    <TextButton
-      content="hello kitty"
-      backgroundColor="#e4e4e4"
-      height={45}
-      border="1px solid red"
-    />
-  )
+  return <Ripple />
 }
 
 export default App
