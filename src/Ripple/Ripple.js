@@ -1,5 +1,5 @@
-import React from "react";
-import styles from "./Ripple.css";
+import React from 'react'
+import styles from './Ripple.css'
 
 const Ripple = props => (
   <>
@@ -11,6 +11,6 @@ const Ripple = props => (
       </div>
     </div>
   </>
-);
+)
 
-export default Ripple;
+export default Ripple

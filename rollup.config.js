@@ -1,42 +1,42 @@
-import babel from "rollup-plugin-babel";
-import resolve from "rollup-plugin-node-resolve";
-import { terser } from "rollup-plugin-terser";
-import { string } from "rollup-plugin-string";
+import babel from 'rollup-plugin-babel'
+import resolve from 'rollup-plugin-node-resolve'
+import { terser } from 'rollup-plugin-terser'
+import { string } from 'rollup-plugin-string'
 
-const dist = "dist";
-const bundle = "bundle";
+const dist = 'dist'
+const bundle = 'bundle'
 
-const production = !process.env.ROLLUP_WATCH;
+const production = !process.env.ROLLUP_WATCH
 
 module.exports = {
-  input: "src/index.js",
-  external: ["react"],
+  input: 'src/index.js',
+  external: ['react'],
   output: [
     {
       file: `${dist}/${bundle}.cjs.js`,
-      format: "cjs"
+      format: 'cjs'
     },
     {
       file: `${dist}/${bundle}.esm.js`,
-      format: "esm"
+      format: 'esm'
     },
     {
-      name: "BehiveComponents",
+      name: 'BehiveComponents',
       file: `${dist}/${bundle}.umd.js`,
-      format: "umd",
+      format: 'umd',
       globals: {
-        react: "React"
+        react: 'React'
       }
     }
   ],
   plugins: [
     resolve(),
     babel({
-      exclude: "node_modules/**"
+      exclude: 'node_modules/**'
     }),
     string({
-      include: "**/*.css"
+      include: '**/*.css'
     }),
     production && terser()
   ]
-};
+}
