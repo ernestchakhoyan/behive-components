@@ -1,0 +1,14 @@
+.text-button {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+
+  max-width: 320px;
+
+  border-radius: 25px;
+
+  text-align: center;
+
+}
