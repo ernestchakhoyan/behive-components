@@ -1,16 +1,16 @@
-import { configure, addParameters } from '@storybook/react'
-import packageJson from '../package.json'
+import { configure, addParameters } from "@storybook/react";
+import packageJson from "../package.json";
 
-function loadStories () {
-  require('../stories/index.js')
+function loadStories() {
+    require("../stories/index.js");
 }
 
 addParameters({
-  options: {
-    name: 'behive components',
-    url: packageJson.repository,
-    showPanel: false
-  }
-})
+    options: {
+        name: "behive components",
+        url: packageJson.repository,
+        showPanel: false
+    }
+});
 
-configure(loadStories, module)
+configure(loadStories, module);
