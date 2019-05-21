@@ -1,9 +1,14 @@
-import React from 'react'
+import React from "react";
 
-import { Ripple, TextButton } from 'behive-components'
+import { Ripple, TextButton } from "behive-components";
 
-function App () {
-  return <TextButton width={'400px'} backgroundColor="red" />
+function App() {
+    return (
+        <div>
+            <Ripple />
+            <TextButton />
+        </div>
+    );
 }
 
-export default App
+export default App;
