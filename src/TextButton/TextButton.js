@@ -1,12 +1,14 @@
 import React from "react";
 import PropTypes from "prop-types";
-import styles from "./TextButton.css";
+import * as styles from "../constants";
+
+import TextButtonStyles from "./TextButton.css";
 
 const TextButton = (props) => {
-    const { content, backgroundColor, textColor, border, width, height } = props;
+    const { content, callback, backgroundColor, textColor, border, width, height } = props;
     return (
         <>
-            <style>{styles.toString()}</style>
+            <style>{TextButtonStyles.toString()}</style>
             <div
                 className="text-button"
                 style={{
@@ -16,6 +18,7 @@ const TextButton = (props) => {
                     color: textColor,
                     border
                 }}
+                onClick={callback}
             >
                 {content}
             </div>
@@ -24,6 +27,7 @@ const TextButton = (props) => {
 };
 
 TextButton.propTypes = {
+    callback: PropTypes.func,
     content: PropTypes.string,
     backgroundColor: PropTypes.string,
     textColor: PropTypes.string,
@@ -34,9 +38,9 @@ TextButton.propTypes = {
 
 TextButton.defaultProps = {
     content: "Button",
-    backgroundColor: "#80A1FD",
-    textColor: "#ffffff",
-    border: "1px solid #ffffff",
+    backgroundColor: styles.MAIN_THEME_COLOR,
+    textColor: styles.WHITE,
+    border: `1px solid ${styles.WHITE}`,
     width: 250,
     height: 45
 };
