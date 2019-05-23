@@ -1,6 +1,6 @@
 import React from "react";
 
-import { Ripple, TextButton } from "behive-components";
+import { Ripple, TextButton, ImageHolder } from "behive-components";
 
 class App extends React.Component {
     constructor() {
@@ -16,6 +16,9 @@ class App extends React.Component {
             <div>
                 <Ripple />
                 <TextButton callback={this.ok} />
+                <div classname="image-holder-wrapper">
+                    <ImageHolder backgroundImage="https://files1.porsche.com/filestore/image/multimedia/none/ww-rangeshotcountryselector-front/normal/71b9ecff-44da-11e9-80c4-005056bbdc38/porsche-normal.jpg" />
+                </div>
             </div>
         );
     }
