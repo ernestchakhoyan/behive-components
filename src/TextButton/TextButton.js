@@ -1,11 +1,12 @@
 import React from "react";
-import PropTypes from "prop-types";
+import * as PropTypes from "prop-types";
 import * as styles from "../constants";
+import { Loader } from "../Loader";
 
 import TextButtonStyles from "./TextButton.css";
 
 const TextButton = (props) => {
-    const { content, callback, backgroundColor, textColor, border, width, height } = props;
+    const { loading, content, callback, backgroundColor, textColor, border, width, height } = props;
     return (
         <>
             <style>{TextButtonStyles.toString()}</style>
@@ -20,7 +21,7 @@ const TextButton = (props) => {
                 }}
                 onClick={callback}
             >
-                {content}
+                {loading ? <Loader color={styles.WHITE} /> : content}
             </div>
         </>
     );
@@ -33,7 +34,8 @@ TextButton.propTypes = {
     textColor: PropTypes.string,
     border: PropTypes.string,
     width: PropTypes.number,
-    height: PropTypes.number
+    height: PropTypes.number,
+    loading: PropTypes.bool
 };
 
 TextButton.defaultProps = {

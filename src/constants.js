@@ -1,3 +1,5 @@
+// Components colors
+
 export const MAIN_THEME_COLOR = "#80A1FD";
 export const LIGHTER_THEME_COLOR = "rgba(128, 161, 253, 0.77)";
 export const RED = "#F05659";
@@ -15,3 +17,8 @@ export const LIGHTEST_IRON = "#E0E3E8";
 
 export const WHISPER_WHITE = "#F5F6FA";
 export const WHITE = "#ffffff";
+
+// Components sizes
+
+export const LOADER_SIZE = 35;
+export const LOADER_WIDTH = 2;
