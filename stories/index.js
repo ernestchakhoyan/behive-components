@@ -1,7 +1,9 @@
 import React from "react";
 import { storiesOf } from "@storybook/react";
-import { Ripple, TextButton } from "../src";
+import { Loader, Ripple, TextButton } from "../src";
 
 storiesOf("Loaders", module)
     .add("Ripple", () => <Ripple />)
-    .add("TextButton", () => <TextButton />);
+    .add("Loader", () => <Loader />);
+
+storiesOf("Buttons", module).add("TextButton", () => <TextButton />);

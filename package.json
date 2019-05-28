@@ -16,7 +16,7 @@
     "build": "rollup -c",
     "lint": "eslint '**/*.js'",
     "lint:fix": "prettier-eslint '**/*.js' --write",
-    "storybook": "start-storybook -p 7777 -c storybook",
+    "storybook": "start-storybook -p 7778 -c storybook",
     "storybook:build": "build-storybook -c storybook",
     "pre-deploy": "build-storybook -c storybook",
     "deploy": "gh-pages -d storybook-static",
