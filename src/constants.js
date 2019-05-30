@@ -20,5 +20,7 @@ export const WHITE = "#ffffff";
 
 // Components sizes
 
-export const LOADER_SIZE = 35;
+export const BUTTON_WIDTH = 225;
+export const BUTTON_HEIGHT = 45;
+export const LOADER_SIZE = 25;
 export const LOADER_WIDTH = 2;

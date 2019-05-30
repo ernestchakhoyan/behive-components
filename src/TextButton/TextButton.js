@@ -43,8 +43,8 @@ TextButton.defaultProps = {
     backgroundColor: styles.MAIN_THEME_COLOR,
     textColor: styles.WHITE,
     border: `1px solid ${styles.WHITE}`,
-    width: 250,
-    height: 45
+    width: styles.BUTTON_WIDTH,
+    height: styles.BUTTON_HEIGHT
 };
 
 export default TextButton;
