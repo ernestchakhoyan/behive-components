@@ -6,7 +6,8 @@ import { Loader } from "../Loader";
 import TextButtonStyles from "./TextButton.css";
 
 const TextButton = (props) => {
-    const { loading, content, callback, backgroundColor, textColor, border, width, height } = props;
+    const { loading, disabled, content, callback, backgroundColor, textColor, border, width, height } = props;
+
     return (
         <>
             <style>{TextButtonStyles.toString()}</style>
@@ -15,13 +16,13 @@ const TextButton = (props) => {
                 style={{
                     height,
                     width,
-                    backgroundColor,
-                    color: textColor,
-                    border
+                    backgroundColor: !disabled ? backgroundColor : styles.WHISPER_WHITE,
+                    color: !disabled ? textColor : styles.IRON,
+                    border: !disabled ? border : `1px solid ${styles.WHISPER_WHITE}`
                 }}
-                onClick={callback}
+                onClick={!disabled ? callback : null}
             >
-                {loading ? <Loader color={styles.WHITE} /> : content}
+                {loading ? <Loader color={!disabled ? styles.WHITE : styles.IRON} /> : content}
             </div>
         </>
     );
@@ -35,7 +36,8 @@ TextButton.propTypes = {
     border: PropTypes.string,
     width: PropTypes.number,
     height: PropTypes.number,
-    loading: PropTypes.bool
+    loading: PropTypes.bool,
+    disabled: PropTypes.bool
 };
 
 TextButton.defaultProps = {
