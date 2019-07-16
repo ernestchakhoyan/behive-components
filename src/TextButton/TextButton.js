@@ -11,38 +11,16 @@ const TextButton = (props) => {
         disabled,
         content,
         callback,
-        backgroundColor,
-        textColor,
-        border,
-        width,
-        height,
-        hoverColor,
-        hoverBGColor
+        customClassName
     } = props;
 
     return (
         <>
             <style>
                 {TextButtonStyles.toString()}
-                {`.text-button{
-                        color: ${!disabled ? textColor : styles.IRON};
-                        background-color: ${!disabled ? backgroundColor : styles.WHISPER_WHITE};
-                        border: ${!disabled ? border : `1px solid ${styles.WHISPER_WHITE}`};
-                      }
-                      
-                      .text-button:hover{
-                         color: ${!disabled ? hoverColor : styles.IRON};
-                         background-color: ${!disabled ? hoverBGColor : styles.WHISPER_WHITE};
-                      }
-                    
-                `}
             </style>
             <div
-                className="text-button"
-                style={{
-                    height,
-                    width,
-                }}
+                className={`text-button ${customClassName}`}
                 onClick={!disabled ? callback : null}
             >
                 {loading ? <Loader color={!disabled ? styles.WHITE : styles.IRON} /> : content}
@@ -54,26 +32,14 @@ const TextButton = (props) => {
 TextButton.propTypes = {
     callback: PropTypes.func,
     content: PropTypes.string,
-    backgroundColor: PropTypes.string,
-    hoverColor: PropTypes.string,
-    hoverBGColor: PropTypes.string,
-    textColor: PropTypes.string,
-    border: PropTypes.string,
-    width: PropTypes.number,
-    height: PropTypes.number,
+    customClassName: PropTypes.string,
     loading: PropTypes.bool,
     disabled: PropTypes.bool
 };
 
 TextButton.defaultProps = {
     content: "Button",
-    backgroundColor: styles.MAIN_THEME_COLOR,
-    hoverBGColor: styles.MAIN_THEME_COLOR,
-    textColor: styles.WHITE,
-    hoverColor: styles.WHITE,
-    border: `1px solid ${styles.WHITE}`,
-    width: styles.BUTTON_WIDTH,
-    height: styles.BUTTON_HEIGHT
+    customClassName: "main-text-button"
 };
 
 export default TextButton;

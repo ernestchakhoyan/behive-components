@@ -6,6 +6,9 @@
     position: relative;
 
     max-width: 320px;
+    width: 225px;
+    height: 45px;
+
 
     border-radius: 25px;
 
@@ -13,4 +16,15 @@
     text-transform: uppercase;
 
     cursor: pointer;
+}
+
+.main-text-button{
+    border: 1px solid #80A1FD;
+    background-color: #80A1FD;
+    color: #FFFFFF;
+}
+
+.main-text-button:hover{
+    background-color: rgba(128, 161, 253, .8);
+    border: none;
 }
