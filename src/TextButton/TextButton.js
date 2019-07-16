@@ -6,21 +6,15 @@ import { Loader } from "../Loader";
 import TextButtonStyles from "./TextButton.css";
 
 const TextButton = (props) => {
-    const {
-        loading,
-        disabled,
-        content,
-        callback,
-        customClassName
-    } = props;
+    const { loading, disabled, content, callback, customClassName } = props;
+
+    const disabledClassName = disabled ? "disabled" : "";
 
     return (
         <>
-            <style>
-                {TextButtonStyles.toString()}
-            </style>
+            <style>{TextButtonStyles.toString()}</style>
             <div
-                className={`text-button ${customClassName}`}
+                className={`text-button ${customClassName} ${disabledClassName}`}
                 onClick={!disabled ? callback : null}
             >
                 {loading ? <Loader color={!disabled ? styles.WHITE : styles.IRON} /> : content}

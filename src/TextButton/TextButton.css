@@ -28,3 +28,8 @@
     background-color: rgba(128, 161, 253, .8);
     border: none;
 }
+
+.main-text-button.disabled{
+    background-color: #F5F6FA;
+    border: 1px solid #F5F6FA;
+}
