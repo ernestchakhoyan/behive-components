@@ -6,8 +6,8 @@
     position: relative;
 
     max-width: 320px;
-    width: 225px;
-    height: 45px;
+    width: 200px;
+    height: 40px;
 
 
     border-radius: 25px;
@@ -16,6 +16,7 @@
     text-transform: uppercase;
 
     cursor: pointer;
+    font-size: 15px;
 }
 
 .main-text-button{
